@@ -9,6 +9,7 @@ namespace AlgoShop.DataAccess.DAO.Interface
 {
     public interface IStockDAO
     {
-        List<Stock> GetStocks();      
+        List<Stock> GetStocks();
+        int UpdateStock(Order order);
     }
 }

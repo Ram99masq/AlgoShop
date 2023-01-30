@@ -1,4 +1,5 @@
-﻿using AlgoShop.Models;
+﻿using AlgoShop.DataAccess.EF;
+using AlgoShop.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -11,9 +12,10 @@ namespace AlgoShop.DataAccess.DAO
     public class ProductDAO
     {
         SqlDataAccess sqlDataAccess = SqlDataAccess.GetSqlDataAccess();
-
+        
         public List<Product> GetProduct()
         {
+            //return dbcontext.Stocks.ToList();
             DataTable dt = sqlDataAccess.Execute("select * from Product");
             List<Product>? lstOrder = null;
 
